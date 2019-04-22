@@ -3,6 +3,8 @@ package aop;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.List;
+
 public class AopDemo {
     public static void main(String[] args) {
         ApplicationContext act =  new ClassPathXmlApplicationContext("aop.xml");
@@ -29,7 +31,9 @@ class CalculatorImpl implements Calculator{
 
     public int div(int a, int b) {
         System.out.println("executing div method..");
-        int result = a / b;
-        return result;
+        List<Long> list = null;
+        list.get(0);
+//        int result = a / b;
+        return 0;
     }
 }

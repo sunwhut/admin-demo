@@ -16,8 +16,8 @@
     <aop:config>
         <aop:aspect ref="aspectBean">
             <aop:pointcut id="pointcut" expression="execution(* aop.CalculatorImpl.*(..))"/>
-            <aop:before method="doBefore" pointcut-ref="pointcut"/>
             <aop:after method="doAfter" pointcut-ref="pointcut" />
+            <aop:before method="doBefore" pointcut-ref="pointcut"/>
             <aop:after-throwing method="doThrow" pointcut-ref="pointcut" throwing="ex"/>
         </aop:aspect>
     </aop:config>
