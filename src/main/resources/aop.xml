@@ -13,6 +13,12 @@
 
     <bean id="calculatorImpl" class="aop.CalculatorImpl" />
 
+    <bean id="bean" class="ioc.class004.Bean"/>
+
+    <bean class="ioc.class008.RequestController" scope="request"/>
+    <bean class="ioc.class008.SesionController" scope="session"/>
+    <bean class="ioc.class008.ApplicationController" scope="application"/>
+
     <aop:config>
         <aop:aspect ref="aspectBean">
             <aop:pointcut id="pointcut" expression="execution(* aop.CalculatorImpl.*(..))"/>
